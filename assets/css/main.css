@@ -1,0 +1,175 @@
+body{
+    cursor: none; /* 기본 마우스 커서를 숨깁니다 */
+}
+#main{
+    margin-top: 100px;
+}
+#main .inner{
+    padding: 0 30px;
+}
+
+.sc-intro{
+    padding: 30px 0;
+    border-bottom: 1px solid #fff;
+    /* border-top: 1px solid #fff; */
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.sc-intro .left{
+    overflow: hidden;
+}
+
+.sc-intro .word {
+  font-size: 9vw;
+  font-family: 'nenu',sans-serif;
+  text-transform: uppercase;
+  line-height: 0.9;
+  overflow: hidden;
+  font-weight: 500;
+
+}
+.sc-intro .word .char {
+    line-height: 0.8;
+    letter-spacing: -0.04em;
+    /* opacity: 0;
+    transform: translateY(20px);
+    animation: appear 2s forwards;
+    transition: 0.2s; */
+}
+.sc-intro .word .char:hover{
+    /* text-shadow: 2px 2px 4px #ccc; */
+}
+.sc-intro .right {
+    line-height: 1.8;
+}
+
+
+/* @keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+.sc-projects{}
+.sc-projects .container{}
+.sc-projects .pro-list{
+    color: #fff;
+}
+.sc-projects .pro-item{
+    overflow: hidden;
+    display: flex;
+    gap: 10px;
+}
+.sc-projects .pro-item:nth-of-type(even){
+    flex-direction: row-reverse;
+    text-align: right;
+}
+.sc-projects .pro-item:nth-of-type(even) .text-area{padding-left: 30px;padding-right: 0;}
+.sc-projects .pro-item:nth-of-type(even) .text-area .links{
+    justify-content: flex-end;
+}
+
+.sc-projects .pro-item .text-area{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-right: 30px;
+}
+.sc-projects .pro-item .text-area .date{
+    margin-top: auto;
+}
+.sc-projects .pro-item .text-area .title{
+    font-size: 3.2vw;
+    font-family: 'nenu',sans-serif;
+    line-height: 1;
+}
+.sc-projects .pro-item .text-area .desc{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #b3b3b3;
+}
+.sc-projects .pro-item .text-area .links{
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+.sc-projects .pro-item .text-area .links a{
+    border: 1px solid #fff;
+    padding: 11px 24px;
+    border-radius: 50px;
+    font-size: 18px;
+}
+
+.sc-projects .pro-item .img-area{
+    aspect-ratio: 16/10;
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.sc-projects .pro-item .img-area .hash{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    gap: 10px;
+}
+.sc-projects .pro-item .img-area .hash span{
+    border: 1px solid #fff;
+    padding: 11px 24px;
+    border-radius: 50px;
+    font-size: 18px;
+}
+.sc-projects .pro-item .img-area img{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: calc(100% + 100px);
+    object-fit: cover;
+}
+
+
+.sc-projects .pro-item{
+    border-bottom: 1px solid #fff;
+    padding: 30px 0;
+}
+.sc-etc{
+    color: #fff;
+    padding: 30px 0;
+    /* border-bottom: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sc-etc .left{}
+.sc-etc .left .line{
+    overflow: hidden;
+    display: flex;
+}
+.sc-etc .left p{
+    font-size: 0.9vw;
+    line-height: 1;
+}
+.sc-etc .right{
+}
+.sc-etc .right .word{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 200px;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+.sc-etc .right .word .char{
+    line-height: 1;
+    letter-spacing: -0.04em;
+ 
+}

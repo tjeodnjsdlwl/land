@@ -1,0 +1,165 @@
+@import './font.css';
+@import './reset.css';
+@import './common.css';
+
+    
+.cursor{
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    z-index: 100000111110;
+    border-radius: 50%;
+    pointer-events: none;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    top: 0;
+    cursor: none;
+    mix-blend-mode: difference;
+}
+/* .cursor .original {
+    animation: 10s linear infinite normal none running infiniteAnimation1;
+  } */
+.cursor span {
+    animation: 7s linear infinite infiniteAnimation2;
+  }
+
+@keyframes infiniteAnimation2 {
+    0% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+.loading-container{
+    z-index: 99999999999999999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    height: 100vh; 
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: 1s linear forwards LoadingPage;
+    animation-delay: 1.5s; /* 5초 뒤에 애니메이션 시작 */
+    font-size: 10rem;
+}
+@keyframes LoadingPage {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.loading-container .text-area .dot{
+  opacity: 0;
+  animation: 0.5s linear infinite fade;
+}
+@keyframes fade{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loading-container .text-area .dot:nth-child(1){animation-delay: 0.3s;}
+.loading-container .text-area .dot:nth-child(2){animation-delay: 0.5s;}
+.loading-container .text-area .dot:nth-child(3){animation-delay: 0.7s;}
+
+.loading-container .guage-box{
+  width: 50%;
+  height: 50px;
+  background: #ccc;
+}
+.loading-container .guage-bar{
+  /* transform-origin: left; */
+  background: #000;
+  width: 50%;
+  height: 50px;
+  animation: 1.5s linear forwards guage;
+}
+@keyframes guage{
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.loading-container .progress-area{}
+.loading-container .progress-area .loading{}
+.loading-container .progress-area .loading .number{}
+.loading-container .progress-area .loading .per{}
+
+
+#header{
+    width: 100%;
+    padding: 0 30px;
+    height: 100px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all .2s;
+    font-family: 'nenu',sans-serif;
+    font-size: 18px;
+    mix-blend-mode: difference;
+    z-index: 10;
+}
+#header .inner{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#header .time .clock{
+    margin-left: 5px;
+}
+#header .time{
+    display: flex;
+}
+
+#footer{
+    color: #fff;
+}
+#footer .container{
+padding: 30px 10px;
+}
+#footer .container ul{
+}
+#footer .container ul li:hover{
+    background-color:#151515;
+
+}
+#footer .container ul li{
+    border-bottom: 1px solid #ccc;
+}
+#footer .container ul li a{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align-last: left;
+   
+
+}
+#footer .container ul li a .media{
+    flex: 1;
+}
